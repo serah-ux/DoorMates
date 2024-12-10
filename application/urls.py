@@ -23,6 +23,7 @@ from application import views
 urlpatterns = [
     path('', views.Home, name='home'),
     path('site/', views.SiteView, name='site'),
+    path('dashboard/',views.dashboard,name='dashboard'),
     path('reg/', views.RegView, name='reg'),
     path('register/', views.RegisterView, name='register'),
     path('login/', views.LoginView, name='login'),
@@ -32,7 +33,7 @@ urlpatterns = [
     path('reset-password/<str:reset_id>/', views.ResetPassword, name='reset-password'),
     path('index/', views.index, name='index'),
     path('contact/', views.contact, name='contact'),
-    path('book/', views.book, name='book'),
+    path('workers/',views.workers,name='workers'),
     path('profile/', views.profile, name='profile'),
     path('edit/<int:id>/', views.edit, name='edit'),
     path('delete/<int:id>/', views.delete, name='delete'),

@@ -1,18 +1,24 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from .forms import AppointmentForm, ContactForm
+from django.contrib import messages
+from django.shortcuts import  get_object_or_404
+# from .forms import AppointmentForm, ContactForm
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
+# from django.contrib import messages
 from django.conf import settings
 from django.core.mail import EmailMessage
 from django.utils import timezone
 from django.urls import reverse
+
+from .forms import ProfileForm, PaymentMethodForm, AppointmentForm, ContactForm
 from .models import *
 
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
 def SiteView(request):
     return render(request, 'site.html')
+
 
 @login_required
 def Home(request):
@@ -56,6 +62,7 @@ def RegisterView(request):
 
     return render(request, 'register.html')
 
+
 def RegView(request):
     if request.method == "POST":
         first_name = request.POST.get('first_name')
@@ -94,9 +101,6 @@ def RegView(request):
     return render(request, 'register.html')
 
 
-
-
-
 def LoginView(request):
     if request.method == "POST":
         username = request.POST.get("username")
@@ -114,6 +118,7 @@ def LoginView(request):
             return redirect('login')
 
     return render(request, 'login.html')
+
 
 @login_required
 def LogoutView(request):
@@ -214,11 +219,14 @@ def ResetPassword(request, reset_id):
 
     return render(request, 'reset_password.html')
 
+
 @login_required
 def index(request):
     return render(request, 'index.html')
+
+
 @login_required
-def book(request):
+def profile(request):
     if request.method == "POST":
         form = AppointmentForm(request.POST)
         if form.is_valid():
@@ -227,7 +235,8 @@ def book(request):
     else:
         form = AppointmentForm()
 
-    return render(request, 'book.html', {'form': form})
+    return render(request, 'profile.html', {'form': form})
+
 
 @login_required
 def contact(request):
@@ -241,16 +250,18 @@ def contact(request):
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
 
+
 @login_required
-def profile(request):
+def workers(request):
     data = Appointment.objects.all()
-    return render(request, 'profile.html', {'data': data})
+    return render(request, 'workers.html', {'data': data})
+
 
 @login_required
 def edit(request, id):
     appointment = get_object_or_404(Appointment, id=id)
     if request.method == 'POST':
-        form = AppointmentForm(request.POST,request.FILES,instance=appointment)
+        form = AppointmentForm(request.POST, request.FILES, instance=appointment)
         if form.is_valid():
             form.save()
             messages.success(request, 'Appointment Updated successfully')
@@ -261,6 +272,7 @@ def edit(request, id):
         form = AppointmentForm(instance=appointment)
 
     return render(request, 'edit.html', {'form': form})
+
 
 @login_required
 def delete(request, id):
@@ -275,28 +287,28 @@ def delete(request, id):
     return redirect('contact')
 
 
-# @api_view(['GET', 'POST'])
-# def appointmentapi(request):
-#     if request.method == 'GET':
-#         appointment = Appointment.objects.all()
-#         serializer = AppointmentSerializer(appointmentapi, many=True)
-#         return JsonResponse(serializer.data, safe=False)
-#     elif request.method == 'POST':
-#         serializer = AppointmentSerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
-#         return JsonResponse(serializer.errorsc,status=status.HTTP_400_BAD_REQUEST)
-#
-# def mpesaapi(request):
-#      client = MpesaClient()
-#      phone_number = '0112054071'
-#      amount = 1
-#      account_reference = 'eMobilis'
-#      transaction_desc = 'payment  to dev '
-#      callback_url = 'https://darajambili.herokuapp.com/express-payment'
-#      response = client.stk_push(phone_number, amount,account_reference, transaction_desc,callback_url)
-#      return HttpResponse(response)
+@login_required
+def client_dashboard(request):
+    # Profile Form
+    if request.method == 'POST' and 'profile_submit' in request.POST:
+        profile_form = ProfileForm(request.POST, request.FILES, instance=request.user.profile)
+        if profile_form.is_valid():
+            profile_form.save()
+            return redirect('dashboard')
 
+    # Payment Form
+    if request.method == 'POST' and 'payment_submit' in request.POST:
+        payment_form = PaymentMethodForm(request.POST, instance=request.user.paymentmethod)
+        if payment_form.is_valid():
+            payment_form.save()
+            return redirect('dashboard')
 
+    # Get Forms
+    profile_form = ProfileForm(instance=request.user.profile)
+    payment_form = PaymentMethodForm(instance=request.user.paymentmethod)
 
+    context = {
+        'profile_form': profile_form,
+        'payment_form': payment_form,
+    }
+    return render(request, 'client_dashboard.html', context)
