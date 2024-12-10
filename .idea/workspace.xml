@@ -4,46 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d478d1-830b-4c40-ba96-fcd07c4136dc" name="Changes" comment="main">
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/chef.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/client_workflow.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/contact_us_banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/driver.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/ease_of_use.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/electrician.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/inclusivity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/innovation.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/provider_workflow.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/quality.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/team.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/transparent_pricing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/trust.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/static/assets/img/vetted_professionals.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/templates/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/templates/workers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/test_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/static/assets/img/img_long_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/static/assets/img/img_sq_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/static/assets/img/img_sq_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/static/assets/img/img_sq_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/static/assets/img/img_sq_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/static/assets/img/img_sq_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/static/assets/img/img_sq_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/static/assets/img/online_instructor.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/application/static/assets/img/private_tutor.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/templates/book.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/templates/site.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/site.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="a1d478d1-830b-4c40-ba96-fcd07c4136dc" name="Changes" comment="yes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +86,7 @@
       <workItem from="1733694327222" duration="750000" />
       <workItem from="1733698095272" duration="9431000" />
       <workItem from="1733830270624" duration="817000" />
-      <workItem from="1733832674133" duration="19564000" />
+      <workItem from="1733832674133" duration="19805000" />
     </task>
     <task id="LOCAL-00001" summary="git add&#10;git">
       <option name="closed" value="true" />
@@ -151,7 +112,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733693819044</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="git add">
+      <option name="closed" value="true" />
+      <created>1733872256277</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733872256277</updated>
+    </task>
+    <task id="LOCAL-00005" summary="yes">
+      <option name="closed" value="true" />
+      <created>1733872422857</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733872422857</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +148,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git add&#10;git" />
     <MESSAGE value="main" />
-    <option name="LAST_COMMIT_MESSAGE" value="main" />
+    <MESSAGE value="DoorMates" />
+    <MESSAGE value="git add" />
+    <MESSAGE value="yes" />
+    <option name="LAST_COMMIT_MESSAGE" value="yes" />
   </component>
 </project>
